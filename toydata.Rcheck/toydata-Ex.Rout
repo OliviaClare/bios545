@@ -1,0 +1,82 @@
+
+R version 4.1.3 (2022-03-10) -- "One Push-Up"
+Copyright (C) 2022 The R Foundation for Statistical Computing
+Platform: x86_64-pc-linux-gnu (64-bit)
+
+R is free software and comes with ABSOLUTELY NO WARRANTY.
+You are welcome to redistribute it under certain conditions.
+Type 'license()' or 'licence()' for distribution details.
+
+  Natural language support but running in an English locale
+
+R is a collaborative project with many contributors.
+Type 'contributors()' for more information and
+'citation()' on how to cite R or R packages in publications.
+
+Type 'demo()' for some demos, 'help()' for on-line help, or
+'help.start()' for an HTML browser interface to help.
+Type 'q()' to quit R.
+
+> pkgname <- "toydata"
+> source(file.path(R.home("share"), "R", "examples-header.R"))
+> options(warn = 1)
+> library('toydata')
+> 
+> base::assign(".oldSearch", base::search(), pos = 'CheckExEnv')
+> base::assign(".old_wd", base::getwd(), pos = 'CheckExEnv')
+> cleanEx()
+> nameEx("digit_return")
+> ### * digit_return
+> 
+> flush(stderr()); flush(stdout())
+> 
+> ### Name: digit_return
+> ### Title: return the kth digit of x from the end of x
+> ### Aliases: digit_return
+> 
+> ### ** Examples
+> 
+> digit_return(x=789,k=3,opp=FALSE)
+[1] 7
+> digit_return(x=-789,k=1,opp=FALSE)
+[1] 9
+> 
+> 
+> 
+> cleanEx()
+> nameEx("outlier")
+> ### * outlier
+> 
+> flush(stderr()); flush(stdout())
+> 
+> ### Name: outlier
+> ### Title: Mean after getting rid of outlier
+> ### Aliases: outlier
+> 
+> ### ** Examples
+> 
+> set.seed(123)
+> (myunif <- runif(20,1,10))
+ [1] 3.588198 8.094746 4.680792 8.947157 9.464206 1.410008 5.752949 9.031771
+ [9] 5.962915 5.109533 9.611500 5.080007 7.098136 6.153701 1.926322 9.098425
+[17] 3.214790 1.378536 3.951286 9.590533
+> outlier(myunif,.10)
+[1] 5.9929
+> 
+> 
+> 
+> ### * <FOOTER>
+> ###
+> cleanEx()
+> options(digits = 7L)
+> base::cat("Time elapsed: ", proc.time() - base::get("ptime", pos = 'CheckExEnv'),"\n")
+Time elapsed:  0.064 0.013 0.081 0 0 
+> grDevices::dev.off()
+null device 
+          1 
+> ###
+> ### Local variables: ***
+> ### mode: outline-minor ***
+> ### outline-regexp: "\\(> \\)?### [*]+" ***
+> ### End: ***
+> quit('no')

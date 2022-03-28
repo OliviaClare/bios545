@@ -1,0 +1,2 @@
+importFrom("stats", "quantile")
+export("digit_return", "outlier")

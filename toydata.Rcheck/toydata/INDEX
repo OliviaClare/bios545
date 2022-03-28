@@ -1,0 +1,3 @@
+digit_return            return the kth digit of x from the end of x
+outlier                 Mean after getting rid of outlier
+toydata-package         What the package does (short line)
